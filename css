@@ -1,0 +1,83 @@
+:root
+.alert--success{background:rgba(30,122,74,0.08); color:var(--success)}
+.alert--danger{background:rgba(198,40,40,0.08); color:var(--danger)}
+
+
+/* Footer institucional */
+.footer{
+margin-top:28px;
+padding:22px 0;
+border-top:1px solid #EEF2F4;
+display:flex;
+gap:14px;
+align-items:center;
+}
+.footer__brand{display:flex; gap:10px; align-items:center}
+.footer__links{margin-left:auto; display:flex; gap:8px}
+.footer small{color:var(--mg-muted)}
+
+
+/* Utilities */
+.u-row{display:flex; gap:12px; align-items:center}
+.u-center{text-align:center}
+.m-0{margin:0}
+.mt-8{margin-top:8px}
+.mt-16{margin-top:16px}
+.p-0{padding:0}
+.p-8{padding:8px}
+
+
+/* Breadcrumbs */
+.breadcrumb{display:flex; gap:8px; align-items:center; font-size:0.95rem; color:var(--mg-muted)}
+.breadcrumb a{color:var(--mg-primary); text-decoration:none; font-weight:600}
+
+
+/* Cards de destaque com borda de cor */
+.card--accent{
+border-left:6px solid var(--mg-primary);
+padding-left:12px;
+}
+
+
+/* Componentes para publicações e notícias */
+.news{
+display:flex; gap:14px; align-items:flex-start;
+}
+.news__thumb{width:120px; height:80px; border-radius:8px; object-fit:cover; background:#E9EEF1}
+.news__meta{color:var(--mg-muted); font-size:0.9rem}
+
+
+/* Ações rápidas / painéis administrativos */
+.panel-actions{display:flex; gap:10px; flex-wrap:wrap}
+.action{display:flex; gap:10px; align-items:center; padding:10px; border-radius:8px; background:white; box-shadow:var(--shadow-sm)}
+.action__icon{width:36px; height:36px; border-radius:8px; display:grid; place-items:center; background:var(--glass)}
+
+
+/* Print stylesheet */
+@media print{
+:root{background:white}
+body{color:#000; background:white}
+.nav, .header__logo, .hero__actions, .footer{display:none}
+.container{padding:6mm}
+.card{box-shadow:none}
+}
+
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+*{transition:none !important; animation:none !important}
+}
+
+
+/* Small helper: high contrast variant for official pages */
+.theme--contrast{
+background:linear-gradient(180deg,#fff,#FAFAFA);
+color:var(--mg-dark);
+}
+.theme--contrast .btn--primary{background:var(--mg-primary-700)}
+
+
+/* Example responsive utility for layout switching */
+.row{display:flex; gap:18px}
+.col{flex:1}
+@media(max-width:880px){.row{flex-direction:column}}
