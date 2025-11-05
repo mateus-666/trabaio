@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Missão: Inteligência Artificial</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+<header>
+<h1>Crie uma Missão sobre Inteligência Artificial</h1>
+<p>Digite um objetivo ou tema e clique em <strong>Gerar Missão</strong>.</p>
+</header>
+
+
+<section class="card">
+<label for="prompt">Seu objetivo/tema:</label>
+<textarea id="prompt" placeholder="Ex.: Usar IA para melhorar a educação em comunidades remotas" rows="4"></textarea>
+<div class="actions">
+<button id="generate">Gerar Missão</button>
+<button id="example">Exemplo</button>
+</div>
+</section>
+
+
+<section class="card" id="resultCard">
+<h2>Missão gerada</h2>
+<div id="result">Nenhuma missão gerada ainda.</div>
+</section>
+
+
+<footer>
+<small>Projeto de demonstração — IA como tema de missão.</small>
+</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
